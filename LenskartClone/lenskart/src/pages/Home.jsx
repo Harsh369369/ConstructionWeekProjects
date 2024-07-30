@@ -12,6 +12,7 @@ import TrendProduct from "../components/TrendProduct";
 import React, { useEffect, useState } from "react";
 import Login from "../components/Login";
 import { Box } from "@chakra-ui/react";
+import axios from 'axios';
 
 
 const Home = () => {
@@ -20,22 +21,16 @@ const Home = () => {
 
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let res = await fetch("http://localhost:3000/section");
-        if (res.ok) {
-          const data = await res.json();
-          setSections(data);
-        } else {
-          console.log(`Server responded with a ${res.status} error.`);
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchData();
+    axios.get('https://lenskartserver.onrender.com/sections')
+      .then(response => {
+        console.log('Data fetched successfully: ', response.data);
+        setSections(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching data: ', error);
+      });
   }, []);
+
 
   
 

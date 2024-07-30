@@ -10,10 +10,12 @@ const Banner = ({ image, title, productType, redirect, link }) => {
   let productListType;
 
   if (redirect === 'productPage') {
-    serverLink = `http://localhost:3000${link}`;
+    serverLink = `https://lenskartserver.onrender.com/${link}`;    
+    console.log(serverLink, redirect);
     productListType = productType;
   } else {
-    serverLink = `http://localhost:3000${link}`;
+    serverLink = `https://lenskartserver.onrender.com/${link}`;
+    console.log(serverLink, redirect);
     productListType = 'ALL';
   }
 

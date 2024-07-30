@@ -11,7 +11,8 @@ import {
   Image,
   border,
   Text,
-  Divider
+  Divider,
+  Center
 } from "@chakra-ui/react";
 import { wrap } from "framer-motion";
 
@@ -21,43 +22,44 @@ function BottomNav() {
       width={"100%"}
       justifyContent={"space-between"}
       alignItems={"center"}
-      height={"70px"}
+      height={"auto"}
       paddingX={'2rem'}
       backgroundColor={"#fbf9f7"}
     >
       <Flex
         width={"70%"}
         justifyContent={"space-between"}
-        flexWrap={wrap}
+        flexWrap={'wrap'}
         height={"70px"}
+        wrap={'wrap'}
       >
-            <Button variant="link" color={"black"}>
+            <Link href='/products' color={"black"} alignContent={"center"} fontWeight={'semibold'} >
               EYEGLASSES
-            </Button>
+            </Link>
 
-            <Button variant="link" color={"black"}>
+            <Link href='/products' color={"black"} alignContent={"center"} fontWeight={'semibold'}>
               SCREEN GLASSES
-            </Button>
+            </Link>
 
-            <Button variant="link" color={"black"}>
+            <Link href='/products' color={"black"} alignContent={"center"} fontWeight={'semibold'}>
               KIDS GLASSES
-            </Button>
+            </Link>
 
-            <Button variant="link" color={"black"}>
+            <Link href='/products' color={"black"} alignContent={"center"} fontWeight={'semibold'}>
               CONTACT LENSES
-            </Button>
+            </Link>
 
-            <Button variant="link" color={"black"}>
+            <Link href='/products' color={"black"} alignContent={"center"} fontWeight={'semibold'}>
               SUNGLASSES
-            </Button>
+            </Link>
 
-            <Button variant="link" color={"black"}>
+            <Link href='/products' color={"black"} alignContent={"center"} fontWeight={'semibold'}>
               HOME EYE-TEST
-            </Button>
+            </Link>
 
-            <Button variant="link" color={"black"}>
+            <Link href='/products' color={"black"} alignContent={"center"} fontWeight={'semibold'}>
               STORE LOCATOR
-            </Button>
+            </Link>
 
       </Flex>
       <Flex gap={"3px"}>
